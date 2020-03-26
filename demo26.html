@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>保持左右高度一致</title>
+    <style>
+        .nav {
+            overflow: hidden;
+        }
+        .left {
+            background-color: red;
+        }
+        .right {
+            background-color: blue;
+        }
+        .left,
+        .right {
+            width: 300px;
+            min-height: 30px;
+            margin-bottom: -6000px;
+            padding-bottom: 6000px;
+            float: left;
+        }
+    </style>
+</head>
+<body>
+    <button onclick="addLeft()">增加左边高度</button>
+    <button onclick="addRight()">增加右边高度</button>
+    <div class="nav">
+        <div class="left"></div>
+        <div class="right"></div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script>
+        var $addLeft;
+        function addLeft() {
+            $addLeft = "<div>我是左边</div>";
+            $(".left").append($addLeft);
+        }
+        var $addRight;
+        function addRight() {
+            $addRight = "<div>我是右边</div>";
+            $(".right").append($addRight);
+        }
+    </script>
+</body>
+</html>

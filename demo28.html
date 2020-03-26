@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>单选按钮</title>
+	<style type="text/css">
+		.radio-beauty-container {
+            font-size: 0;
+        }
+	    .radio-name {
+	        vertical-align: middle;
+	        font-size: 16px;
+	    }
+	    .radio-beauty {
+	        width: 18px;
+	        height: 18px;
+	        box-sizing: border-box;
+	        display: inline-block;
+	        border: 1px solid #3e8ddc;
+	        vertical-align: middle;
+	        margin: 0 15px 0 3px;
+	        border-radius: 50%;
+	    }
+        .radio-beauty:hover {
+	        background-image: url('./images/warranty_choose.png');
+	        background-size: 100%;
+	        background-repeat: no-repeat;
+		}
+	    input[type="radio"]:checked + .radio-beauty {
+	        background-image: url('./images/warranty_choose.png');
+	        background-size: 100%;
+	        background-repeat: no-repeat;
+	    }
+	</style>
+</head>
+<body>
+	<div class="radio-beauty-container">
+    <label>
+        <input type="radio" name="radioName" id="radioName1" hidden/>
+        <label for="radioName1" class="radio-beauty"></label>
+        <span class="radio-name">前端工程师</span>
+    </label>
+    <label>
+        <input type="radio" name="radioName" id="radioName2" hidden/>
+        <label for="radioName2" class="radio-beauty"></label>
+        <span class="radio-name">后端工程师</span>
+    </label>
+    <label>
+        <input type="radio" name="radioName" id="radioName3" hidden/>
+        <label for="radioName3" class="radio-beauty"></label>
+        <span class="radio-name">全栈工程师</span>
+    </label>
+</div>
+</body>
+</html>
