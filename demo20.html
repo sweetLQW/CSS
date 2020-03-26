@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>垂直居中</title>
+    <style>
+        .outer-box {
+            width: 200px;
+            height: 200px;
+            border: 1px solid red;
+        }
+        .inner-box {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+        }
+
+        .outer-box1 {
+            position: relative;
+        }
+        .outer-box1 .inner-box {
+            margin: 0 auto;
+            position: relative;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        .outer-box2 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .outer-box3 {
+            display: table;
+        }
+        .outer-box3 .cell {
+            display: table-cell;
+            vertical-align: middle;
+        }
+        .outer-box3 .inner-box {
+            margin: 0 auto;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="outer-box1 outer-box"><div class="inner-box"></div></div>
+    <div class="outer-box2 outer-box"><div class="inner-box"></div></div>
+    <div class="outer-box3 outer-box"><div class="cell"><div class="inner-box"></div></div></div>
+
+</body>
+</html>

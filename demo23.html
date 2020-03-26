@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>position</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+        html {
+            padding-top: 50px;
+        }
+        body {
+            padding: 20px;
+        }
+        .fixed-text {
+            position: fixed;
+            top: 0;
+            left: 0;
+            color: red;
+        }
+        .absolute-text {
+            position: absolute;
+            top: 20px;
+            left: 0;
+            color: green;
+        }
+    </style>
+</head>
+<body>
+    <h1>position属性</h1>
+    <p>参数：absolute、fixed、relative、static、inherit</p>
+    <br>
+
+    <p>提示：absolute与fixed定位会脱离文档流，布局方式会更改为inline-block。</p>
+    <br>
+
+    <p>absolute 绝对定位</p>
+    <p>脱离文档流，不占位，相对于 static 定位以外的第一个父元素进行定位，如果没有则根据HTML文档进行定位（不是body与html元素），会随着滚动条滚动，元素的位置可通过 "left", "top", "right" 以及 "bottom" 属性进行规定。</p>
+    <div class="absolute-text">我是绝对定位元素（left:0,top:20px）</div>
+    <br>
+
+    <p>fixed 固定定位</p>
+    <p>脱离文档流，不占位，根据浏览器的窗口进行定位，不随滚动条滚动，元素的位置可通过 "left", "top", "right" 以及 "bottom" 属性进行规定。</p>
+    <div class="fixed-text">我是固定定位元素（left:0,top:0）</div>
+    <br>
+
+    <p>relative 相对定位</p>
+    <p>不脱离文档流，根据元素自身的位置进行定位，元素的位置可通过 "left", "top", "right" 以及 "bottom" 属性进行规定。</p>
+    <br>
+
+    <p>static 默认值</p>
+    <p>没有定位，不能使用left等定位及z-index。</p>
+    <br>
+
+    <p>inherit 继承</p>
+    <p>从父元素继承 position 属性的值。</p>
+
+</body>
+</html>

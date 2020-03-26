@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>transition与animation区别</title>
+    <style>
+        .box {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+        }
+
+        .transition-box {
+            transition: width 3s linear 0.5s;
+        }
+        .transition-box:hover {
+            width: 300px;
+        }
+
+        .animation-box {
+            animation: changewidth 3s linear 0.5s 3 alternate;
+        }
+        @keyframes changewidth {
+            to { width:300px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="transition-box box"></div>
+    <div class="animation-box box"></div>
+</body>
+</html>
