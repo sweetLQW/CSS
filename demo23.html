@@ -10,6 +10,7 @@
             margin: 0;
         }
         html {
+            height: 2000px;
             padding-top: 50px;
         }
         body {
@@ -26,6 +27,11 @@
             top: 20px;
             left: 0;
             color: green;
+        }
+        .sticky-text {
+            position: sticky;
+            top: 0;
+            color: aqua;
         }
     </style>
 </head>
@@ -49,6 +55,11 @@
 
     <p>relative 相对定位</p>
     <p>不脱离文档流，根据元素自身的位置进行定位，元素的位置可通过 "left", "top", "right" 以及 "bottom" 属性进行规定。</p>
+    <br>
+
+    <p>sticky 粘性（兼容性差）</p>
+    <p>relative与fixed的结合，随着页面滚动，当元素距离窗口的值大于top值，position为relative，反之为fixed</p>
+    <div class="sticky-text">我是粘性定位元素（left:0,top:0）</div>
     <br>
 
     <p>static 默认值</p>
